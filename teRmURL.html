@@ -91,21 +91,21 @@
     <div class="vision-widget__loader">
       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
     </div>
-    <button onclick="getStatus()"></button>
   </div>
 <script type="text/javascript">
   const PaymentStatus = "success";
-  // const ErrCode = "{{ .ErrCode }}"
+  const ErrCode = "{{ .ErrCode }}"
    
   function getStatus() {
     if(PaymentStatus != ""){
       window.parent.postMessage({
+        'error': ErrCode,
         'finishPaymentStatus' : PaymentStatus
       }, "*")
     }
     console.log('Отправил статус на платежную страницу')
   }
-  // getStatus();
+  getStatus();
 
 </script>
 </body>
