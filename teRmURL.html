@@ -95,11 +95,11 @@
   </div>
 <script type="text/javascript">
   const PaymentStatus = "success";
-  const ErrCode = "{{ .ErrCode }}"
+  // const ErrCode = "{{ .ErrCode }}"
    
   function getStatus() {
     if(PaymentStatus != ""){
-      window.top.postMessage(PaymentStatus, ErrCode)
+      window.top.postMessage(PaymentStatus)
     }
     console.log('Отправил статус на платежную страницу')
   }
