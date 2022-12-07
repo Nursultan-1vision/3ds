@@ -99,7 +99,7 @@
    
   function getStatus() {
     if(PaymentStatus != ""){
-      window.top.postMessage({
+      window.parent.postMessage({
         'finishPaymentStatus' : PaymentStatus
       }, "*")
     }
