@@ -91,6 +91,7 @@
     <div class="vision-widget__loader">
       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
     </div>
+    <button onclick="getStatus()"></button>
   </div>
 <script type="text/javascript">
   const PaymentStatus = "{{ .PaymentStatus }}";
@@ -101,7 +102,7 @@
       window.top.postMessage(PaymentStatus, ErrCode)
     }
   }
-  getStatus();
+  // getStatus();
 
 </script>
 </body>
