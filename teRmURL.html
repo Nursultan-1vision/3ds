@@ -99,7 +99,7 @@
    
   function getStatus() {
     if(PaymentStatus != ""){
-      window.top.postMessage(PaymentStatus)
+      window.top.postMessage(PaymentStatus, "*")
     }
     console.log('Отправил статус на платежную страницу')
   }
